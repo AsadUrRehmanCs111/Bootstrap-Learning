@@ -10,7 +10,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <!--custom CSS-->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
   <!--Font awesome and bootstarp socials-->
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
@@ -43,7 +44,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a id="loginBtn">
             <span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
@@ -106,8 +107,7 @@
         </div>
         <div class="col-sm-3 align-self-center">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-small btn-warning nav-link" data-toggle="modal"
-            data-target="#tableReservation">
+          <button type="button" class="btn btn-small btn-warning nav-link" id="reserveTableBtn">
             Reserve Table
           </button>
         </div>
@@ -117,7 +117,7 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="tableReservation" tabindex="-1" role="dialog" aria-labelledby="tableReservationModel"
+  <div class="modal fade" id="reserveTableModal" tabindex="-1" role="dialog" aria-labelledby="tableReservationModel"
     aria-hidden=" true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -385,6 +385,17 @@
           $("#carouselButton").children("span").removeClass('fa-play');
           $("#carouselButton").children("span").addClass('fa-pause');
         }
+      });
+
+
+      //JavaScript Code for Login modal
+      $("#loginBtn").click(function () {
+        $("#loginModal").modal("show");
+      });
+
+      //JavaScript Code for Reserve Table Modal
+      $("#reserveTableBtn").click(function () {
+        $("#reserveTableModal").modal("show");
       });
     });
   </script>
