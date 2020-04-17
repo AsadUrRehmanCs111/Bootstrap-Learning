@@ -15,6 +15,7 @@
 
 // Adding Scss Variables
 $lt-gray: #ddd;
+$floral-white:#fffaf0;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
@@ -101,10 +102,10 @@ body {
 
 .modal-header {
     background: $background-dark;
-    color: $lt-gray;
+    color: $floral-white;
 
     .close {
-        color: $lt-gray;
+        color: $floral-white;
     }
 }
 
